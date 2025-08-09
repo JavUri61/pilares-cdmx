@@ -1,0 +1,16 @@
+{
+  "name": "dialogflow-agent",
+  "version": "1.0.0",
+  "description": "Dialogflow agent for PILARES CDMX",
+  "scripts": {
+    "deploy": "gcloud dialogflow deploy",
+    "test": "jest"
+  },
+  "dependencies": {
+    "dialogflow": "^1.2.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}

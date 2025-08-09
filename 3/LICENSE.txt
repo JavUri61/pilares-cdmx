@@ -1,0 +1,6 @@
+MIT License
+
+Copyright (c) 2023 PILARES CDMX
+
+Permission is hereby granted...
+[include full license text]

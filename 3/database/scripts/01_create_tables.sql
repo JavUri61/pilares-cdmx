@@ -1,0 +1,26 @@
+CREATE TABLE sedes (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  direccion TEXT NOT NULL,
+  latitud DECIMAL(10, 8) NOT NULL,
+  longitud DECIMAL(11, 8) NOT NULL,
+  horario VARCHAR(50) NOT NULL,
+  capacidad INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE actividades (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  sede_id BIGINT NOT NULL,
+  horario VARCHAR(50) NOT NULL,
+  cupo INT NOT NULL,
+  FOREIGN KEY (sede_id) REFERENCES sedes(id)
+);
+
+CREATE TABLE preguntas_frecuentes (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  pregunta TEXT NOT NULL,
+  respuesta TEXT NOT NULL,
+  tags VARCHAR(255)
+);
